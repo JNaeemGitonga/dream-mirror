@@ -34,11 +34,13 @@ const CardStyle = css`
 
 const StyledGrid = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
   margin-top: 1rem;
   width: 100%;
+  max-width: 900px;
 
   @media (min-width: 600px) {
     width: auto;
