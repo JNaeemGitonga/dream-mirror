@@ -59,11 +59,11 @@ export default function Shows({ show }) {
           <Portrait images={artist.images} />
 
           <FlexyRow justify="flex-start">
-            <a href={artist.webUrl.includes('http') ? artist.webUrl : `https://${artist.webUrl}`} target="_blank">Website</a>
-            <a href={artist.facebookUrl} target="_blank">Facebook</a>
-            <a href={artist.instagramUrl} target="_blank">Instagram</a>
-            <a href={artist.youTubeUrl} target="_blank">YouTube</a>
-            <a href={artist.spotifyUrl} target="_blank">Spotify</a>
+            {artist.webUrl && <a href={artist.webUrl.includes('http') ? artist.webUrl : `https://${artist.webUrl}`} target="_blank">Website</a>}
+            {artist.facebookUrl && <a href={artist.facebookUrl} target="_blank">Facebook</a>}
+            {artist.instagramUrl && <a href={artist.instagramUrl} target="_blank">Instagram</a>}
+            {artist.youtubeUrl && <a href={artist.youTubeUrl} target="_blank">YouTube</a>}
+            {artist.spotifyUrl && <a href={artist.spotifyUrl} target="_blank">Spotify</a>}
           </FlexyRow>
 
           <Markdown source={artist.bio} />
