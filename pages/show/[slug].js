@@ -5,6 +5,7 @@ import FlexyRow from '@c/FlexyRow'
 import { Title } from '@c/Title'
 import { getShowBySlug } from '@l/graphcms'
 import { formatUSD, formatDate } from '@l/utils'
+import Link from 'next/link'
 
 const Markdown = styled(ReactMarkdown)`
   img {
@@ -58,7 +59,7 @@ export default function Shows({ show }) {
           <Portrait images={artist.images} />
 
           <FlexyRow justify="flex-start">
-            <a href={artist.webUrl} target="_blank">Website</a>
+            <a href={artist.webUrl.includes('http') ? artist.webUrl : `https://${artist.webUrl}`} target="_blank">Website</a>
             <a href={artist.facebookUrl} target="_blank">Facebook</a>
             <a href={artist.instagramUrl} target="_blank">Instagram</a>
             <a href={artist.youTubeUrl} target="_blank">YouTube</a>
