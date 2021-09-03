@@ -55,7 +55,6 @@ const StyledGrid = styled.div`
 `
 
 export function Card({ children, header, href, title }) {
-  console.log('SEE HREF ', href)
   return href ? (
     <Link href={href} passHref>
       <a css={CardStyle} title={title}>

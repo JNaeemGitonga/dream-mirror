@@ -6,7 +6,6 @@ import { getAllShows } from '@l/graphcms';
 import SortingBar from '@c/SortingBar';
 
 export default function Shows({ shows }) {
-  console.log(shows)
   const [sortedShows, setSortedShows] = useState([...shows]);
   const handleSort = (order, name) => {
     if (name.includes('name')) {
