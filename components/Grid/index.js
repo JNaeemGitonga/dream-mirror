@@ -46,6 +46,12 @@ const StyledGrid = styled.div`
     width: auto;
     flex-direction: row;
   }
+
+  @media (max-width: 600px) {
+    a {
+      min-width: 288px;
+    }
+  }
 `
 
 export function Card({ children, header, href, title }) {
