@@ -62,6 +62,7 @@ export default function Shows({ show }) {
             <a href={artist.facebookUrl} target="_blank">Facebook</a>
             <a href={artist.instagramUrl} target="_blank">Instagram</a>
             <a href={artist.youTubeUrl} target="_blank">YouTube</a>
+            <a href={artist.spotifyUrl} target="_blank">Spotify</a>
           </FlexyRow>
 
           <Markdown source={artist.bio} />
